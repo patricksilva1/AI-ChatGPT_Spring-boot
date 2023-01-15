@@ -1,0 +1,27 @@
+body {
+    font-size: medium;
+}
+
+.starter-template {
+    text-align: center;
+}
+
+input {
+    font-size: medium;
+    padding: 5px;
+    margin: 5px;
+    border: inset;
+    width: 50%;
+}
+
+fieldset {
+    border: none;
+}
+
+h1 {
+    color: #000000;
+}
+
+h2 {
+    color: #000000;
+}

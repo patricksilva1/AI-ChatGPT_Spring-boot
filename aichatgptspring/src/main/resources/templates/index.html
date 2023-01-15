@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head th:fragment="head">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>Test</title>
+    <link rel="stylesheet" th:href="@{/css/main.css}" />
+</head>
+
+<body>
+    <main role="main" class="container">
+        <div class="starter-template">
+            <h2>Patrick's AI - ChatGPT API at<br />patricksilva.me</h2>
+            <h3>Send a message:</h3>
+            <form th:action="@{/}" method="post">
+                <fieldset>
+                    <div class="form-group">
+                        <input type="text" name="message" th:value="${request}" required autofocus />
+                    </div>
+                    <div class="row">
+                        <input type="submit" value="Send" />
+                    </div>
+                </fieldset>
+            </form>
+            <h3 th:if="${response != null}">The ChatGPT Response: </h3>
+            <p th:if="${response != null}" th:text="${response}" />
+        </div>
+    </main>
+</body>
+
+</html>

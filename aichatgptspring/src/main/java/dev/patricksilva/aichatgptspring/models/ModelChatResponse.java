@@ -6,14 +6,14 @@ import java.util.Optional;
 public record ModelChatResponse(Usage usage, List<Choice> choices) {
 
     public Optional<String> firstAnswer() {
+
         if (choices == null || choices.isEmpty()) {
             return Optional.empty();
         }
         return Optional.of(choices.get(0).text);
-
     }
 
-    record Usage(int total_tokens, int propmt_tokens, int completion_tokens) {
+    record Usage(int total_tokens, int prompt_tokens, int completion_tokens) {
 
     }
 
