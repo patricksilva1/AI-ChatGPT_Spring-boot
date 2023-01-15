@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <title>Test</title>
     <link rel="stylesheet" th:href="@{/css/main.css}" />
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
@@ -19,7 +21,9 @@
                         <input type="text" name="message" th:value="${request}" required autofocus />
                     </div>
                     <div class="row">
-                        <input type="submit" value="Send" />
+                        <!-- <input class="custom-btn btn-16" type="submit" value="Send" /> -->
+
+                        <button class="custom-btn btn-16">Send it</button>
                     </div>
                 </fieldset>
             </form>
